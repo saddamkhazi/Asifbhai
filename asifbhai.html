@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+<div class="container-fluid" id="dd">
+
+</div>
+
+<script>
+
+$(document).ready(function() {
+var $dialogue = $("#dd");
+
+	 UArray = [{
+			callno: '01', 
+			stationno: "02",
+			partno:"K02"
+		}];			
+	for(var count= 0;count< UArray.length;count++){
+	debugger;
+		//if(UserDetailsArray[count].Password == name ){
+			dataload = UArray[count];
+			
+			 if(dataload.callno.length==0 ||dataload.callno	==undefined){
+				
+				flag=false;
+				
+				}
+		else
+		{
+		  flag=true;
+		}
+	}
+
+	
+	  if(flag==true){
+	  
+	  
+			var $user = $('<div class="row"><div class="col-sm-2" style="background-color:lavender;"><form><span class="form-group"><label for="usr">Call:</label><span> '+dataload.call+' </span><span class="form-group"><label for="pwd">Station No:</label><span> '+dataload.stationno+'</span></span></span><div class="form-group"><label for="usr">Part No:</label><span id="dd"> '+dataload.partno+'</span></div><div class="form-group><label for="usr">New value </label><span> </span></div></form></div></div>');
+			
+			 
+		}	 
+			
+	
+	
+	else
+	{
+	var $user = 'No Data Are Avaiblabe';
+	
+	
+	}
+	
+	$dialogue.append($user);
+
+	
+});
+
+</script>
+</body>
+</html>
+
